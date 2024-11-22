@@ -1,0 +1,162 @@
+.maincontainer {
+  min-height: 100vh;
+  margin-top: 110px;
+}
+
+.mainheading {
+  margin-top: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.mainheading span {
+  font-size: 3.2rem;
+  color: #007ebb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.gridcontainer {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid4cols {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid5cols {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.iconitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.iconbg {
+  background-color: #d1d5db; /* Gray color for background */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px; /* Full rounding */
+  padding: 0.5rem 2.5rem;
+}
+
+.icontext {
+  font-size: 0.875rem; /* Small text size */
+  margin-left: 1.5rem;
+  color: black;
+}
+
+.skillsimagecontainer {
+  position: relative;
+  animation: pulse 2s infinite;
+}
+
+.mainimage {
+  object-fit: contain;
+  height: 80%;
+}
+
+.overlayicon {
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 32%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 0 50px rgba(0, 126, 187, 0.7);
+}
+
+.overlayiconimage {
+  object-fit: contain;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 425px) {
+  .mainheading {
+    font-size: 1.875rem;
+margin-top: 2rem;
+      }
+
+  .mainheading span {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .skillsimagecontainer {
+    transform: rotate(180deg);
+  }
+  .mainimage {
+    object-fit: contain;
+    height: 80%;
+    width: 20rem;
+  }
+  .overlayicon {
+    top: 50%;
+    right: 30%;
+  }
+
+  .overlayiconimage {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  .iconbg {
+    width: 12rem;
+    padding: 0.5rem 1rem;
+  }
+  .icontext {
+    margin-left: 1rem;
+  }
+  .grid4cols {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .grid5cols {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .iconbg {
+    width: 7rem;
+    padding: 0.5rem 0.5rem;
+  }
+  .icontext {
+    margin-left: 0.5rem;
+  }
+  .objectcontain {
+    width: 30px;
+    height: 30px;
+  }
+}

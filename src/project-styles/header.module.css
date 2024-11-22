@@ -1,0 +1,170 @@
+.navcontainer {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  height: 100px;
+  padding: 6px 0;
+  backdrop-filter: blur(0.7rem);
+  position: fixed;
+  width: calc(100vw - 17px); /* Adjust width to account for scrollbar */
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+  
+  .logowrapper {
+    position: relative;
+    width: 148px;
+    
+  }
+  
+  .logoimage {
+    position: absolute;
+    inset: 0;
+    height: 92px;
+  }
+  
+  .logooverlay {
+    position: absolute;
+    left: 80px;
+    width: 100px;
+  }
+  
+  .navdesktop {
+    /* Set to block in larger screens using media query */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px; /* Space between links */
+    
+  }
+  
+  .navitem {
+    font-size: 18px;
+    list-style-type: none;
+    
+  }
+  
+  .navlink {
+    padding: 16px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    color: white;
+    text-decoration: none;
+  }
+  .navlink:hover{
+  
+    font-weight: bold;
+  }
+  .activeLink .navunderline {
+    width: 100%;
+    background-color: #3b82f6; /* Same color as on hover */
+  }
+  .navunderline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .navlink:hover .navunderline {
+    width: 100%;
+    background-color: #3b82f6;
+    font-weight: bold;
+  }
+  
+  /* Mobile Navigation */
+.mobilenav {
+  display: none;
+}
+
+.menuIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007ebb;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 55vw;
+  background: linear-gradient(to bottom right, #007ebb, #33a1ff, #005f8a);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.3s ease; /* Smooth slide-in */
+  z-index: 10000;
+  margin: 0;
+}
+
+/* Sidebar open state */
+.sidebarOpen {
+  transform: translateX(0); /* Slide in */
+}
+
+.closeButton {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.mobilenavlink {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.mobilenavlink:hover {
+  color: #60a5fa; /* blue-400 */
+}
+
+.mobilenavhr {
+  margin: 8px 0;
+  color: rgb(190, 190, 190);
+}
+
+@media (max-width: 768px) {
+  .navcontainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    gap: 200px;
+    height: 50px;
+    padding: 0;
+  }
+  .logowrapper {
+    width: -50px;
+  }
+  
+  .logoimage {
+    height: 62px;
+    width: 140px;
+  }
+  .logooverlay {
+    left: 40px;
+    width: 80px;
+    height: 80px;
+  }
+  .navdesktop {
+    display: none;
+  }
+  .mobilenav {
+    display: flex;
+  }
+}

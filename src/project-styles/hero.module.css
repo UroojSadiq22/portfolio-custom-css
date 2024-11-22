@@ -1,0 +1,244 @@
+/* General Styles */
+.maincontainer {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 110px auto;
+}
+
+.maincontent {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profilecontainer {
+  padding: 6rem;
+  padding-right: 1rem;
+  margin: 0.5rem;
+}
+
+/* herostyle.module.css */
+.arrow,
+.container {
+  position: relative;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagecontainer {
+  position: relative;
+  background-color: #007ebb;
+  border-radius: 50%;
+  margin: 1.2rem;
+  width: fit-content;
+}
+
+.profileimage {
+  width: 14rem;
+  height: 14rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-radius: 50%;
+}
+
+.motioncircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textcontainer {
+  padding-top: 0.8rem;
+}
+
+.mainheading {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.mainheading span {
+  color: #007ebb;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.subheading {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Arrow SVG */
+.whitearrowsvg {
+  position: absolute;
+  transform: rotate(-10deg);
+  top: -6%;
+  left: -100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.herointro {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.herointro span {
+  color: #007ebb;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-right: 2rem;
+}
+
+/* Divider Line */
+.dividerline {
+  width: 0.3rem;
+  height: 12rem;
+  background-color: #6b7280;
+  margin: 0 2rem;
+}
+
+.herodescription {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.herotitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.herotitle span {
+  color: #007ebb;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.heroparagraph {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+/* Social Icons */
+.socialicons {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  border: 1px solid transparent;
+}
+
+.sociallink {
+  padding: 0.3rem;
+  backdrop-filter: blur(0.2rem);
+  border-radius: 9999px; /* Full rounded */
+  border: 1px solid #ffffff;
+  transition: all 0.3s ease-in-out;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+}
+
+.sociallink:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #007ebb;
+}
+@media (max-width: 425px) {
+  .maincontainer {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+  .maincontent {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .profileimage {
+    width: 12rem;
+    height: 12rem;
+    padding: 0.8rem;
+    padding-bottom: 0;
+  }
+  .imagecontainer {
+    position: relative; /* Make the image container relative */
+  }
+  .whitearrowsvg {
+    transform: rotate(-25deg);
+    top: -12%; /* Center the arrow vertically relative to the image */
+    left: -34%; /* Adjust based on image position */
+    transform-origin: center; /* Ensure smooth rotation around the center */
+  }
+  .profilecontainer {
+    padding: 2rem;
+    padding-right: 0;
+    margin: 0.5rem;
+  }
+  .dividerline {
+    margin-right: 0;
+  }
+  .description {
+    margin-right: 1rem;
+  }
+  .herotitle {
+    font-size: 1rem;
+  }
+
+  .herotitle span {
+    font-size: 1.8rem;
+  }
+
+  .heroparagraph {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .imagecontainer {
+    position: relative; /* Make the image container relative */
+  }
+  .whitearrowsvg {
+    transform: rotate(-25deg);
+    top: -12%; /* Center the arrow vertically relative to the image */
+    left: -42%; /* Adjust based on image position */
+  }
+  .maincontent {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .profilecontainer {
+    padding: 2rem;
+    padding-right: 0;
+    margin: 0.5rem;
+  }
+  .profileimage {
+    width: 12rem;
+    height: 12rem;
+    padding: 0.8rem;
+    padding-bottom: 0;
+  }
+  .dividerline {
+    height: 15rem;
+    margin: 0 0.5rem;
+  }
+  .herodescription {
+    padding: 0.5rem;
+  }
+  .heroparagraph {
+    font-size: 0.7rem;
+  }
+}

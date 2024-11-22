@@ -1,0 +1,272 @@
+
+.maincontainer {
+  min-height: 100vh;
+margin-top: 110px;
+}
+
+.mainheading {
+  margin-top: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.mainheading span {
+  font-size: 3.2rem;
+  color: #007ebb;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+}
+
+.content h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.5rem;
+  color: white;
+}
+
+.paragraph {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  width: 100%;
+}
+
+.textlarge {
+  font-size: 1rem;
+}
+
+.downloadbuttoncontainer {
+  display: grid;
+  width: 15rem;
+  max-width: 24rem; 
+  align-items: center;
+  gap: 0.4rem; 
+  margin-top: 1rem; 
+  margin-bottom: 1rem;
+}
+.downloadbuttoncontainer a {
+  text-decoration: none;
+}
+
+/* Button Styles */
+.downloadbutton {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border: 2px solid #007ebb;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.downloadbutton:hover h1 {
+  color: #007ebb;
+}
+
+.downloadbutton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4b5563;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.downloadbutton:hover::before {
+  transform: scaleX(1);
+  z-index: 0;
+}
+.downloadicon {
+  width: 18px;
+  height: 18px;
+}
+.downloadbutton h1 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: black;
+}
+.statsimage {
+  padding: 0 2rem;
+  width: 35%;
+}
+.statscontainer {
+  display: flex;
+  gap: 2.5rem; 
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.statsitem {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.countupnumber {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #007ebb; 
+}
+
+.divider {
+  width: 2px;
+  height: 2rem; 
+  background-color: #6b7280;
+}
+
+.statsitem p {
+  font-size: 1rem;
+  color: #ffffff80; 
+}
+
+.container {
+  position: relative;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagecontainer {
+  position: relative;
+  background-color: #007ebb;
+  border-radius: 50%;
+  margin: 1.2rem;
+  width: fit-content;
+}
+
+.profileimage {
+  width: 14rem;
+  height: 14rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-radius: 50%;
+}
+.motioncircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18rem; /* Default width */
+  height: 18rem;
+}
+
+/* Image Container */
+.imagecontainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 425px) {
+  .mainheading {
+    font-size: 1.875rem;
+    margin-top: 2rem;
+  }
+
+  .mainheading span {
+    font-size: 2.5rem;
+  }
+  .flexcontainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .statscontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statsitem {
+    gap: 0.4rem; /* Spacing between the number, divider, and text */
+  }
+
+  .countupnumber {
+    font-size: 2.4rem; /* Adjust font size for number */
+  }
+  .imagecontainer {
+    position: relative;
+    background-color: #007ebb;
+    border-radius: 50%;
+    margin: 1.2rem;
+    width: fit-content;
+  }
+
+  .profileimage {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .motioncircle {
+    width: 15rem;
+    height: 15rem; 
+  }
+  .content {
+    width: 18rem;
+  }
+
+  .content h1 {
+    font-size: 1.2rem;
+  }
+
+  .textlarge {
+    font-size: 0.8rem;
+  }
+
+  .downloadbuttoncontainer {
+    width: 12rem;
+  }
+
+  .downloadbutton {
+    padding: 0.1rem 0.8rem;
+  }
+
+  .downloadicon {
+    width: 15px;
+    height: 15px;
+  }
+  .downloadbutton h1 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .flexcontainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    width: 40rem;
+  }
+}
